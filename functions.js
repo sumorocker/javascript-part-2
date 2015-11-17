@@ -72,6 +72,16 @@ console.log(longestWord(arrayOfPeople));
 console.log(alphaEmails(arrayOfPeople));
     
 
+//determining square of multiple elements of an array using map function
 
+
+var numbers = [2,4,6,8];
+var mappedNum = numbers.map(squareNum);
+                           
+function squareNum (numberToBeSquared){
+    return numberToBeSquared * numberToBeSquared;
+}
+
+console.log(mappedNum);
 
 
