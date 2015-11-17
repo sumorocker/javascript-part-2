@@ -1,5 +1,6 @@
 //find the longest word in an array of words and return it, Question 1
 
+/*
 function longestWord (arrayOfWords){
      var sortedArray = arrayOfWords.sort(
          function(a,b){
@@ -117,5 +118,47 @@ var squaredPerps = perps.map(squaredNum);
 
 console.log(squaredPerps);
 
+*/
+
+// Operation maker Question 5
 
 
+function operationMaker (operation){
+    
+    if(operation === "add"){
+        return function adder(n1, n2){
+            return n1 + n2;
+        }
+    }
+    else if(operation === "subtract"){
+        return function subtracter(n1, n2){
+            return n1 - n2;
+        }
+    }
+    else if(operation === "multiply"){
+        return function multiplier(n1, n2){
+            return n1 * n2;
+        }
+    }
+    else if(operation === "divide"){
+        return function divider(n1,n2){
+            return n1/n2;
+        }
+    }
+
+};
+
+var adder = operationMaker("add");
+var subtracter = operationMaker("subtract");
+var multiplier = operationMaker("multiply");
+var divider = operationMaker("divide");
+
+var resultAdd = adder (8,8);
+var resultSubt = subtracter(9, 8);
+var resultMult = multiplier(5, 5);
+var resultDiv = divider(6, 2);
+
+console.log (resultAdd);
+console.log (resultSubt);
+console.log (resultMult);
+console.log (resultDiv);
