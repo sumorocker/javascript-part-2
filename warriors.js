@@ -23,3 +23,4 @@ var character2 = new warriorCreator("steve", "M" );
 
 
 console.log(character1.faceoff(character2));
+
